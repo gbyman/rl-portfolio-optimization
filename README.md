@@ -55,7 +55,7 @@ Colab에서 실행시 시각화까지 2분~3분 정도의 시간이 걸립니다
 
 **Step 1. 저장소 클론 및 라이브러리 설치**
 ```bash
-git clone [https://github.com/gbyman/rl-portfolio-optimization.git](https://github.com/gbyman/rl-portfolio-optimization.git)
+git clone https://github.com/gbyman/rl-portfolio-optimization.git
 cd rl-portfolio-optimization
 pip install -r requirements.txt
 ```
