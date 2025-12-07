@@ -2,7 +2,7 @@
 강화학습(PPO)을 활용하여 고변동성 자산(SOXL)과 고배당 자산(JEPQ)을 혼합한 최적의 포트폴리오 운용 전략을 학습하는 프로젝트입니다.
 
 ## Project Overview
-변동성이 극심한 **3배 레버리지 ETF(SOXL)**와 안정적인 **커버드콜 ETF(JEPQ)**를 결합하여, 하락장 방어와 수익률 극대화를 동시에 추구하는 AI 에이전트를 개발하는 것을 목표로 합니다.
+변동성이 극심한 **3배 레버리지 ETF(SOXL)** 와 안정적인 **커버드콜 ETF(JEPQ)** 를 결합하여, 하락장 방어와 수익률 극대화를 동시에 추구하는 AI 에이전트를 개발하는 것을 목표로 합니다.
 
 ###  프로젝트 핵심목포
 1. **Human Rule vs AI:** 인간의 직관적 전략(1표준편차 활용, 리밸런싱)을 AI가 학습을 통해 넘어설 수 있는지 검증합니다.
@@ -45,7 +45,7 @@ Colab에서 실행시 시각화까지 2분~3분 정도의 시간이 걸립니다
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/gbyman/rl-portfolio-optimization/blob/main/main.ipynb)
 
 1. 위 배지를 클릭합니다.
-2. Colab 상단 메뉴에서 **[런타임]** > **[모두 실행]**을 클릭하면 데이터 다운로드부터 학습, 시각화까지 자동으로 진행됩니다.
+2. Colab 상단 메뉴에서 **[런타임]** > **[모두 실행]** 클릭하면 데이터 다운로드부터 학습, 시각화까지 자동으로 진행됩니다.
    *(GPU 런타임을 사용하시면 학습 속도가 더 빠릅니다)*
 
 ---
@@ -63,7 +63,7 @@ pip install -r requirements.txt
 ## 실험 결과 (Experiment Results)
 
 ### 1. 성과 비교 그래프 (Performance Comparison)
-아래 그래프는 학습된 **AI 에이전트**, **Rule-based 전략**, 그리고 **Benchmark(SPY)**의 3년간 누적 수익률 추이를 비교한 결과입니다.
+아래 그래프는 학습된 **AI 에이전트**, **Rule-based 전략**, 그리고 **Benchmark(SPY)** 의 3년간 누적 수익률 추이를 비교한 결과입니다.
 
 <p align="center">
   <img src="./assets/rl-result.png" alt="Performance Graph" width="800">
