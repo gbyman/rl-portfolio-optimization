@@ -37,6 +37,7 @@ AI 에이전트는 'Gymnasium' 라이브러리로 구축된 커스텀 환경에�
 
 ## 실행 방법
 본 프로젝트는 학습 속도와 라이브러리 호환성을 위해 **Google Colab** 환경에 최적화되어 있습니다. 별도의 설치 과정 없이 아래 배지를 클릭하여 바로 실행해 보시는 것을 권장합니다.
+Colab에서 실행시 시각화까지 2분~3분 정도의 시간이 걸립니다.
 
 ### 1. Google Colab에서 바로 실행하기 (권장)
 아래 버튼을 클릭하면 Google Colab에서 소스 코드를 바로 열고 실행할 수 있습니다.
@@ -57,3 +58,25 @@ AI 에이전트는 'Gymnasium' 라이브러리로 구축된 커스텀 환경에�
 git clone [https://github.com/gbyman/rl-portfolio-optimization.git](https://github.com/gbyman/rl-portfolio-optimization.git)
 cd rl-portfolio-optimization
 pip install -r requirements.txt
+```
+
+## 실험 결과 (Experiment Results)
+
+### 1. 성과 비교 그래프 (Performance Comparison)
+아래 그래프는 학습된 **AI 에이전트**, **Rule-based 전략**, 그리고 **Benchmark(SPY)**의 3년간 누적 수익률 추이를 비교한 결과입니다.
+
+<p align="center">
+  <img src="./assets/rl-result.png" alt="Performance Graph" width="800">
+</p>
+
+> **그래프 해석:**
+> * 🔴 **AI Agent (Red):** 가장 높은 최종 수익률을 기록했으나, 하락장에서 변동성(MDD) 관리가 되지 않아 그래프의 등락폭이 매우 큽니다.
+> * 🔵 **Rule-based (Blue):** 우상향하는 안정적인 추세를 보이며, 하락장에서도 자산 가치를 효과적으로 방어(Flat)하는 모습이 관찰됩니다.
+> * 🟢 **Benchmark (Green):** 시장 지수(SPY)를 단순 추종하며, 레버리지 전략들에 비해 수익률이 낮습니다.
+
+### 2. 성과 지표 요약 (Summary Table)
+| Strategy | Return (%) | Sharpe Ratio | MDD (%) |
+|----------|:----------:|:------------:|:-------:|
+| **AI Agent (PPO)** | **244.26%** | 0.9106 | -83.71% |
+| **Rule-based** | 228.92% | **2.0730** | **-18.79%** |
+| **Benchmark (SPY)** | 80.78% | 1.3396 | -18.76% |
